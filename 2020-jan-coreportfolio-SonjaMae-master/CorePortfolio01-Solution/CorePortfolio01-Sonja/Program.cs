@@ -48,8 +48,8 @@ namespace CorePortfolio01_Sonja
             double interestRatePerMonth = theMonths * 100;
 
             //Apply the formula:
-            double outputAmortization = thePrincipal * (theInterestRate ^ (Math.Pow(x: 1
-                                                                                       + theInterestRate, y: theMonths) / (1 + theInterestRate)) ^ n - 1)
+            double outputAmortization = thePrincipal * (theInterestRate ^ (Math.Pow(1 + theInterestRate, theMonths)
+                                                        / (1 + theInterestRate)) ^ n - 1);
 
             //Display the results
             Console.WriteLine($"The ")
