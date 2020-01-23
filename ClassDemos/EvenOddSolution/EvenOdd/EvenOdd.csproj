@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C54D2AA7-EBB0-4FE2-8A1B-F8480FE690CA}</ProjectGuid>
+    <ProjectGuid>{82F7DA76-AA05-4784-8924-B8FDC8CA9AF4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CorePortfolio01_Sonja</RootNamespace>
-    <AssemblyName>CorePortfolio01-Sonja</AssemblyName>
+    <RootNamespace>EvenOdd</RootNamespace>
+    <AssemblyName>EvenOdd</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
