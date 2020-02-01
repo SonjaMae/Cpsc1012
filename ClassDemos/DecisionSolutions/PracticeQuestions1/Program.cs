@@ -119,30 +119,61 @@ namespace PracticeQuestions
              //$100 000 and over    $6 000 + 9% of amount over $100 000
             string taxableIncome;
             double incomeTax;
-            double taxableIncomeInt;
             string msg = "";
 
             Console.WriteLine("Please enter your taxable income:\t");
             taxableIncome = Console.ReadLine();
-            taxableIncomeInt = int.Parse(taxableIncome);
 
-            if (taxableIncomeInt <= 50000)
+            if (taxableIncome <= 50000)
             {
-                incomeTax = taxableIncomeInt * 0.05;
+                incomeTax = taxableIncome * 0.05;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncomeInt > 50000 && taxableIncomeInt <= 100000)
+            else if (taxableIncome > 50000 && taxableIncome <= 100000)
             {
-                incomeTax = ((taxableIncomeInt - 50000) * 0.07) + 2500;
+                incomeTax = ((taxableIncome - 50000) * 0.07) + 2500;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncomeInt > 100000)
+            else if (taxableIncome > 100000)
             {
-                incomeTax = ((taxableIncomeInt - 100000) * 0.09) + 6000;
+                incomeTax = ((taxableIncome - 100000) * 0.09) + 6000;
                 msg = $"The income tax owed is {incomeTax}.";
             }
             Console.WriteLine(msg);
             Console.ReadKey();
+
+            //double Earnings = 25000; CamelCase for doubles
+            //decimal taxAmount = 0.00m; pascalCase for decimals
+            //const decimal FIVEPERCENT = 0.05m; UPPERCASE for constants
+
+            //go down an extra line with \n
+            //go down two extra lines with \n\n
+            //insert a tab with \t
+
+            //complier doesn't like mixing of types of variables in the same equation. solutions:     a) make Earnings a decimal
+            //                                                                                        b) make everything a double
+            //                                                                                        c) cast Earnings temporarily to a decimal:
+            //                                                                           taxAmount = (decimal)Earnings * FIVEPERCENT;
+            //                                                                           taxAmount = 2500.00m + (decimal)(Earnings - 50000) * SEVENPERCENT;
+
+            //dollar amounts can be done with:      a) formatting using {:0.00} (without $) or $0.00 (with $)
+            //                                      b) formatting using {:c} (stands fopr currency) will automatically apply $#,###,### formatting
+            //Console.WriteLine($"Earnings: {Earnings:$#,###,##0.00}\t  Taxes: {taxAmount:c}");
+            //though the above code will work, apply only one consistent style of formatting in your code
+            //you can use the # sign as a digit placeholder. # is used as "if a digit space is needed then use this #'s space, otherwise the # will not show"
+
+            //the syntax for column formatting is {variable,columnsize:formatstring}
+            //      variable is the data to output
+            //      columnsize is the number of character spacing to be used for the column
+            //              positive columnsize is right-aligned
+            //              negative columnsize is left-aligned
+            //      formatstring is your string format
+                                        //put out the tax table as a column formatted table:
+                                        //using a \t character will give columns depending on the length of your outputstring (inconsistent)
+                                        //
+                                        //Console.WriteLine("{0,15} {1,13}","Earnings:","Taxes:");
+                                        //Console.WriteLine($"{Earnings,15:c} {taxAmount,13:c}");
+                                        //Console.WriteLine($"\n");
         }
     }
 }
