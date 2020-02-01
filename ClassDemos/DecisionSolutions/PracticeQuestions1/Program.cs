@@ -23,15 +23,15 @@ namespace PracticeQuestions
 
             if (theNumber > 0)
             {
-                Console.WriteLine("Positive");
+                Console.WriteLine($"The number {theNumber} is positive");
             }
             else if (theNumber < 0)
             {
-                Console.WriteLine("Negative");
+                Console.WriteLine($"The number {theNumber} is negative");
             }
             else if (theNumber == 0)
             {
-                Console.WriteLine("Zero");
+                Console.WriteLine($"The number {theNumber} is zero");
             }
             Console.ReadKey();
 
@@ -48,15 +48,15 @@ namespace PracticeQuestions
             {
                 Console.WriteLine("Your admission is free!");
             }
-            else if (userAge < 17)
+            else if (userAge < 18)
             {
                 Console.WriteLine("Your admission is $9.80.");
             }
-            else if (userAge < 54)
+            else if (userAge < 55)
             {
                 Console.WriteLine("Your admission is $11.35.");
             }
-            else if (userAge > 55)
+            else if (userAge > 54)
             {
                 Console.WriteLine("Your admission is $10.00.");
             }
@@ -113,6 +113,10 @@ namespace PracticeQuestions
             /*compute the income tax due on a taxable income entered by the user
              * prompt for the user's taxable income
              * display the income tax due on it*/
+             //taxable income       tax due
+             //up to $50 000        $0 + 5% of amount over $0
+             //up to $100 000       $$2 500 + 7% of amount over $50 000
+             //$100 000 and over    $6 000 + 9% of amount over $100 000
             string taxableIncome;
             double incomeTax;
             double taxableIncomeInt;
@@ -122,19 +126,19 @@ namespace PracticeQuestions
             taxableIncome = Console.ReadLine();
             taxableIncomeInt = int.Parse(taxableIncome);
 
-            if (taxableIncomeInt < 50000)
+            if (taxableIncomeInt <= 50000)
             {
                 incomeTax = taxableIncomeInt * 0.05;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncomeInt >= 50000 && taxableIncomeInt < 100000)
+            else if (taxableIncomeInt > 50000 && taxableIncomeInt <= 100000)
             {
-                incomeTax = 2500 + (taxableIncomeInt * 0.07);
+                incomeTax = ((taxableIncomeInt - 50000) * 0.07) + 2500;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncomeInt >= 100000)
+            else if (taxableIncomeInt > 100000)
             {
-                incomeTax = 6000 + (taxableIncomeInt * 0.09);
+                incomeTax = ((taxableIncomeInt - 100000) * 0.09) + 6000;
                 msg = $"The income tax owed is {incomeTax}.";
             }
             Console.WriteLine(msg);
