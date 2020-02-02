@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighMidLow", "HighMidLow\Hi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicalConditions", "LogicalConditions-Solution\LogicalConditions\LogicalConditions.csproj", "{E462C022-6304-4D51-B687-F79A7FAF561C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeQuestions", "PracticeQuestions\PracticeQuestions.csproj", "{F92A9322-D0F3-4B27-8083-3FAA02D9D79E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeQuestions", "PracticeQuestions1\PracticeQuestions.csproj", "{F92A9322-D0F3-4B27-8083-3FAA02D9D79E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeQuestions2", "PracticeQuestions2\PracticeQuestions2.csproj", "{E1AB3B68-DC5A-460F-AE3E-4D924A412568}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{F92A9322-D0F3-4B27-8083-3FAA02D9D79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F92A9322-D0F3-4B27-8083-3FAA02D9D79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F92A9322-D0F3-4B27-8083-3FAA02D9D79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1AB3B68-DC5A-460F-AE3E-4D924A412568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1AB3B68-DC5A-460F-AE3E-4D924A412568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1AB3B68-DC5A-460F-AE3E-4D924A412568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1AB3B68-DC5A-460F-AE3E-4D924A412568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

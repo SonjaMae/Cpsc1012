@@ -118,25 +118,28 @@ namespace PracticeQuestions
              //up to $100 000       $$2 500 + 7% of amount over $50 000
              //$100 000 and over    $6 000 + 9% of amount over $100 000
             string taxableIncome;
+            double taxableIncomeDouble;
             double incomeTax;
             string msg = "";
 
             Console.WriteLine("Please enter your taxable income:\t");
             taxableIncome = Console.ReadLine();
+            taxableIncomeDouble = double.Parse(taxableIncome);
 
-            if (taxableIncome <= 50000)
+
+            if (taxableIncomeDouble <= 50000)
             {
-                incomeTax = taxableIncome * 0.05;
+                incomeTax = taxableIncomeDouble * 0.05;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncome > 50000 && taxableIncome <= 100000)
+            else if (taxableIncomeDouble > 50000 && taxableIncomeDouble <= 100000)
             {
-                incomeTax = ((taxableIncome - 50000) * 0.07) + 2500;
+                incomeTax = ((taxableIncomeDouble - 50000) * 0.07) + 2500;
                 msg = $"The income tax owed is {incomeTax}.";
             }
-            else if (taxableIncome > 100000)
+            else if (taxableIncomeDouble > 100000)
             {
-                incomeTax = ((taxableIncome - 100000) * 0.09) + 6000;
+                incomeTax = ((taxableIncomeDouble - 100000) * 0.09) + 6000;
                 msg = $"The income tax owed is {incomeTax}.";
             }
             Console.WriteLine(msg);
