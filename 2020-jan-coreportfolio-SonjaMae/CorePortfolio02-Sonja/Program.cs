@@ -21,21 +21,21 @@ namespace CorePortfolio02_Sonja
              *                  GST,
              *                  total;
              * Author: Sonja Holowaychuk
-             * Last modified: 2020.Feb.2
+             * Last modified: 2020.Feb.3
              */
 
             string gravelRequest;
             int gravelInt;
-            double chargeAmount;
+            double chargeAmount = 0;
 
             string deliveryRequest;
-            double deliveryAmount;
+            double deliveryAmount = 0;
 
             double subtotalAmount;
             double gstAmount;
             double totalAmount;
 
-            Console.Write("Welcome to Stoney Gravel Pit!\n");
+            Console.WriteLine("Welcome to Stoney Gravel Pit!\n");
 
             //gravel amount
             Console.Write("Please enter the weight of gravel required (in lbs.):\t");
@@ -102,9 +102,9 @@ namespace CorePortfolio02_Sonja
             totalAmount = subtotalAmount + gstAmount;
 
             //output
-            Console.Write($"The charge for {gravelRequest} lbs. of gravel is {totalAmount:c} per lb.");
-            Console.Write($"{chargeAmount,2:c}");
-            Console.Write("Thank you for your purchase! We hope your day rocks.");
+            Console.WriteLine($"The charge for {gravelRequest} lbs. of gravel is {totalAmount:c} per lb.");
+            Console.WriteLine("{chargeAmount,2:c}, chargeAmount)");
+            Console.WriteLine("Thank you for your purchase! We hope your day rocks.");
             Console.ReadKey();
         }
     }
