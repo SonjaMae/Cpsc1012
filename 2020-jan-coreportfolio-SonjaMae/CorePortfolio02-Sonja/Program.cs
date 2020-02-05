@@ -26,10 +26,10 @@ namespace CorePortfolio02_Sonja
 
             string gravelRequest;
             int gravelInt;
-            double chargeAmount;
+            double chargeAmount = 0;
 
             string deliveryRequest;
-            double deliveryAmount;
+            double deliveryAmount = 0;
 
             double subtotalAmount;
             double gstAmount;
