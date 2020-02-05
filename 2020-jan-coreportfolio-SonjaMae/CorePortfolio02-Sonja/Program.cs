@@ -77,6 +77,8 @@ namespace CorePortfolio02_Sonja
             Console.Write("Do you require delivery (Y/N)?:\t");
             deliveryRequest = Console.ReadLine();
 
+
+            if (deliveryRequest = "y")
             switch (deliveryRequest)
             {
                 case "y":
