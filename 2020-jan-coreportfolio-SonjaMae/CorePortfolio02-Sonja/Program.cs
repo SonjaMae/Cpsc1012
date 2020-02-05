@@ -27,6 +27,7 @@ namespace CorePortfolio02_Sonja
             string gravelRequest;
             int gravelInt;
             double chargeAmount = 0;
+            double gravelAmount = 0;
 
             string deliveryRequest;
             double deliveryAmount = 0;
@@ -43,32 +44,39 @@ namespace CorePortfolio02_Sonja
             gravelInt = int.Parse(gravelRequest);
             if (gravelInt > 0 && gravelInt < 1000)
             {
-                chargeAmount = gravelInt * 0.55;
+                chargeAmount = 0.55;
+                gravelAmount = gravelInt * chargeAmount;
             }
             else if (gravelInt >= 1000 && gravelInt <= 2000)
             {
-                chargeAmount = gravelInt * 0.45;
+                chargeAmount =  0.45;
+                gravelAmount = gravelInt * chargeAmount;
             }
             else if (gravelInt >= 2001 && gravelInt <= 3000)
             {
-                chargeAmount = gravelInt * 0.35;
+                chargeAmount = 0.35;
+                gravelAmount = gravelInt * chargeAmount;
             }
             else if (gravelInt >= 3001 && gravelInt <= 4000)
             {
-                chargeAmount = gravelInt * 0.25;
+                chargeAmount = 0.25;
+                gravelAmount = gravelInt * chargeAmount;
             }
             else if (gravelInt >= 4001 && gravelInt <= 5000)
             {
-                chargeAmount = gravelInt * 0.15;
+                chargeAmount = 0.15;
+                gravelAmount = gravelInt * chargeAmount;
             }
             else if (gravelInt > 5000)
             {
-                chargeAmount = gravelInt * 0.10;
+                chargeAmount = 0.10;
+                gravelAmount = gravelInt * chargeAmount;
             }
 
             //delivery
             Console.Write("Do you require delivery (Y/N)?:\t");
             deliveryRequest = Console.ReadLine();
+
             switch (deliveryRequest)
             {
                 case "y":
@@ -76,7 +84,7 @@ namespace CorePortfolio02_Sonja
                     {
                         if (gravelInt < 0 && gravelInt <= 4800)
                         {
-                            deliveryAmount = chargeAmount * 0.03;
+                            deliveryAmount = gravelAmount * 0.03;
                         }
                         else if (gravelInt > 4800)
                         {
@@ -93,7 +101,7 @@ namespace CorePortfolio02_Sonja
             }
 
             //subtotal
-            subtotalAmount = chargeAmount + deliveryAmount;
+            subtotalAmount = gravelAmount + deliveryAmount;
 
             //GST
             gstAmount = (subtotalAmount * 0.05);
@@ -102,8 +110,14 @@ namespace CorePortfolio02_Sonja
             totalAmount = subtotalAmount + gstAmount;
 
             //output
-            Console.WriteLine($"The charge for {gravelRequest} lbs. of gravel is {totalAmount:c} per lb.");
-            Console.WriteLine("{chargeAmount,2:c}, chargeAmount)");
+            Console.WriteLine("\n");
+            Console.WriteLine($"The charge for {gravelRequest} lbs. of gravel is {chargeAmount:c} per lb.");
+            Console.WriteLine("Subtotal: {0,2:c}", subtotalAmount);
+            Console.WriteLine("Delivery: {0,4:c}", deliveryAmount);
+            Console.WriteLine("GST: {0,11:c}", gstAmount);
+            Console.WriteLine("---------------");
+            Console.WriteLine("Total: {0,2:c}", totalAmount);
+            Console.WriteLine("\n");
             Console.WriteLine("Thank you for your purchase! We hope your day rocks.");
             Console.ReadKey();
         }
