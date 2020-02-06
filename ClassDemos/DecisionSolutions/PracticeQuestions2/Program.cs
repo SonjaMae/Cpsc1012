@@ -34,7 +34,6 @@ namespace PracticeQuestions2
                     {
                         Console.Write("Now please enter the number of hours of internet you've used this month:\t");
                         hoursUsed = Console.ReadLine();
-
                         billAmount = (9.95 + ((hoursUsed >= 10) * 2));
                         //$9.95 per month up to 10 hours;
                         //additional $2.00 per hour;

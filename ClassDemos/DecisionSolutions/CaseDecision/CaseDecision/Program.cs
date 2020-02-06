@@ -113,6 +113,48 @@ namespace PracticeQuestions2
             }//eos
             Console.WriteLine($"Your grade letter ({gradeLetter}) is {percentageRange}.");
             Console.ReadKey(); //when using debugging to stop the auto close of your display
+
+
+
+            Console.WriteLine("\n\n");
+            //another example:
+            int monthNumber = 4;
+
+            //there is a single arugment variable
+            //this single argument variable will be tested against multiple constant values
+            //the case test is an == test ONLY (every other kind of test requires if-elses)
+
+            switch (monthNumber)
+            {
+                case 1:
+                    {
+                        //any logic that is required when monthNumber is 1 goes here
+                        Console.WriteLine("The name of the month is January.");
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("The name of the month is February.");
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("The name of the month is March.");
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("The name of the month is April.");
+                        break;
+                    }
+                default:
+                    {
+                        //this logic is done if one of the previous cases wasn't executed
+                        Console.WriteLine("Too late in the year to think anymore");
+                        break;
+                    }
+            }//eos
+            Console.ReadKey();
         }
     }
 }
