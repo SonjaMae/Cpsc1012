@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Iteration")]
+[assembly: AssemblyTitle("Ierations-")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Iteration")]
+[assembly: AssemblyProduct("Ierations-")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d2d89de5-666a-4fe5-85ab-e4d609281e49")]
+[assembly: Guid("b4c49b02-94ef-40dd-b5c1-3e9f9ae185bc")]
 
 // Version information for an assembly consists of the following four values:
 //
