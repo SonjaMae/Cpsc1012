@@ -55,7 +55,7 @@ namespace Iterations
                 answer = Console.ReadLine();
             }//eow  end of while
 
-            Console.WriteLine("\n\nYou terminated the loop with you last answer?");
+            Console.WriteLine("\n\nYou terminated the loop with you last answer.");
             Console.ReadKey();
         }
     }
