@@ -28,7 +28,7 @@ namespace MenuLoop
                 Console.WriteLine("Select an option from the following menu:\t");
                 Console.WriteLine("A) Play Even or Odd");
                 Console.WriteLine("B) Play Heads or Tails");
-                Console.WriteLine("C) Do case C");
+                Console.WriteLine("C) Play Sum of Squares");
                 Console.WriteLine("X) Exit\n");
                 Console.Write("Enter your menu option:\t");
                 menuOption = Console.ReadLine();
@@ -38,7 +38,7 @@ namespace MenuLoop
                     case "A":
                         {
                             //place any logic to do in case A
-                            Console.WriteLine("You entered the menu option of A.\n\n");
+                            Console.WriteLine("You chose to play Even or Odd.\n");
                             int number = -1;
                             string inputString = "";
 
@@ -102,22 +102,83 @@ namespace MenuLoop
                         {
                             //place the heads or tails game in this case
                             //validate that an h or a t was entered, if not repeat query for input
-                            Console.WriteLine("You entered the menu option of B.\n\n");
+
+                            Console.WriteLine("You chose to play Heads or Tails.\n");
+                            int heads = 0;
+                            int tails = 0;
+
+                            int loopCounter = 1;
+                            string inputValue;
+
+                            while (loopCounter <= 7)
+                            {
+
+                                Console.Write("Enter heads or tails:\t");
+                                inputValue = Console.ReadLine();
+
+                                if (inputValue.ToLower().Equals("heads"))
+                                {
+                                    heads++;  //running total
+                                }
+                                else if (inputValue.ToLower().Equals("tails"))
+                                {
+                                    tails++;    //running total
+                                }//eof
+                                else
+                                {
+                                    Console.WriteLine("Invalid input value.\n");
+                                }
+
+                                loopCounter++;
+
+                                Console.WriteLine($"Your number of heads is {heads}");
+                                Console.WriteLine($"Your number of tails is {tails}\n\n");
+                            }
                             break;
                         }
                     case "C":
                         {
-                            //the sum of squares\//enter positive integer number (validate)
+                            //the sum of squares
+                            //enter positive integer number (validate)
                             //loop n times where n is the integer number (1 to n)
                             //within the loop your calculation is total = loopnumber * loopnumber
                             //after the loop, display your integer number and its sum of squares
-                            //example: entered 4, do the loop 4 times, 1st time is 1 * 1, 2nd time is 2 * 2, 3rd time is 3 * 3, 4th time is 4 * 4, final total = 30 (16+9+4+1=30)
-                            Console.WriteLine("You entered the menu option of C.\n\n");
+                            //example: 
+                                    //entered 4
+                                    //do the loop 4 times
+                                    //1st time is 1 * 1
+                                    //2nd time is 2 * 2
+                                    //3rd time is 3 * 3
+                                    //4th time is 4 * 4
+                                    //final total = 30 (16+9+4+1=30)
+                            Console.WriteLine("You chose to play Sum of Squares.\n");
+
+                            string inputInteger;
+                            int loopNumber = 1;
+                            int totalValue = 0;
+                            int finalTotal = 0;
+
+                            Console.Write("Enter a positive integer value:\t");
+                            inputInteger = Console.ReadLine();
+                            int inputIntegerInt = int.Parse(inputInteger);
+
+                            do
+                            {
+                                totalValue = loopNumber * loopNumber;
+                                
+                                loopNumber++;
+
+                            } while (loopNumber <= inputIntegerInt);
+
+                            finalTotal = totalValue + totalValue + totalValue + totalValue;
+
+                            Console.WriteLine($"\nThe total square sum of your input value, {inputInteger}, is {finalTotal}.\n\n");
+
                             break;
                         }
                     case "X":
                         {
-                            //place any logic to do in case X
+                            //place any logic to do in case X here
                             Console.WriteLine("Thank you. Come again.\n\n");
                             break;
                         }
