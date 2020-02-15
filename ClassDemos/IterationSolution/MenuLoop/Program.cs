@@ -164,15 +164,18 @@ namespace MenuLoop
 
                             do
                             {
-                                totalValue = loopNumber * loopNumber;
+                                //totalValue = totalValue + loopNumber * loopNumber;
+                                //the line below does the same thing except in a shorter fashion
+                                //the += says "add the right side to the left side"
+                                totalValue += loopNumber * loopNumber;
                                 
                                 loopNumber++;
 
                             } while (loopNumber <= inputIntegerInt);
 
-                            finalTotal = totalValue + totalValue + totalValue + totalValue;
+                           // finalTotal = totalValue + totalValue + totalValue + totalValue;
 
-                            Console.WriteLine($"\nThe total square sum of your input value, {inputInteger}, is {finalTotal}.\n\n");
+                            Console.WriteLine($"\nThe total square sum of your input value, {inputInteger}, is {totalValue}.\n\n");
 
                             break;
                         }
