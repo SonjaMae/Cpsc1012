@@ -73,7 +73,7 @@ namespace MenuLoop
                             string inputInteger;
                             int loopNumber = 1;
                             int totalValue = 0;
-                            int finalTotal = 0;
+                            //int finalTotal = 0;
 
                             Console.Write("Enter a positive integer value:\t");
                             inputInteger = Console.ReadLine();
