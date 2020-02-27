@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedLoop", "NestedLoop\Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadsOrTails", "HeadsOrTails\HeadsOrTails.csproj", "{B854F979-B3CD-495B-85CA-231AFA9E1CB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePortfolio03-Sonja", "..\..\..\2020-jan-coreportfolio-SonjaMae\CorePortfolio03-Solution\CorePortfolio03-Sonja\CorePortfolio03-Sonja.csproj", "{6E3BE196-FDA8-4262-84A5-676D67EC75D8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{B854F979-B3CD-495B-85CA-231AFA9E1CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B854F979-B3CD-495B-85CA-231AFA9E1CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B854F979-B3CD-495B-85CA-231AFA9E1CB0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E3BE196-FDA8-4262-84A5-676D67EC75D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E3BE196-FDA8-4262-84A5-676D67EC75D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E3BE196-FDA8-4262-84A5-676D67EC75D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E3BE196-FDA8-4262-84A5-676D67EC75D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
