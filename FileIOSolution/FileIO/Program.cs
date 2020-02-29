@@ -45,6 +45,7 @@ namespace FileIO
             //Full_Path_File_Name = FolderPath + FileName;
             //~~~~~~~~~~~~~~~~~~
 
+            //the best way to do it:
 
             //is there a way to browse for a file?
             //yes. you can call the OpenFileDialog
