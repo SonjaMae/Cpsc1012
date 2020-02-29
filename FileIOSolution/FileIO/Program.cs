@@ -78,8 +78,8 @@ namespace FileIO
                 //if an error happens during the execution of the code, an Exception is thrown by the system
                 //any Exception thrown by the system is passed to the catch{} coding block for processing
 
-                //to test the try/catch, I will introduce a bad path name
-                Full_Path_File_Name = @"C:\Users\sholowaychuk2\Documents\GitHub\Cpsc1012\badpathname.txt";
+                //to test the try/catch, I will introduce a bad path name, such as:
+                //Full_Path_File_Name = @"C:\Users\sholowaychuk2\Documents\GitHub\Cpsc1012\badpathname.txt";
 
                 //add the .Net Framework class that contains the code that will do the read of the file
                 //the require I/O class for reading is StreamReader located in the namespace System.IO
