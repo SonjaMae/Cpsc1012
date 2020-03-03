@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49E36442-34F6-40B8-AB0D-5FFDB13C4C3F}</ProjectGuid>
+    <ProjectGuid>{A6564DE8-99E6-4CBF-8D96-9E86EF90D7B7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FileIO</RootNamespace>
-    <AssemblyName>FileIO</AssemblyName>
+    <RootNamespace>TwoColumnFile</RootNamespace>
+    <AssemblyName>TwoColumnFile</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

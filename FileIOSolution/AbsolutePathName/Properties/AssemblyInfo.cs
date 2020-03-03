@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FileIO")]
+[assembly: AssemblyTitle("AbsolutePathName")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FileIO")]
+[assembly: AssemblyProduct("AbsolutePathName")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9331ef5c-edbb-4291-b41d-e8ab4d1cbe52")]
+[assembly: Guid("dadf5aa5-6472-4582-8fb0-b5f65bec49d6")]
 
 // Version information for an assembly consists of the following four values:
 //
