@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialSearchFind", "Seq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question1", "Question1\Question1.csproj", "{C0CDF4CC-2973-464B-ADBF-5028BE4E1D75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomGen", "RandomGen\RandomGen.csproj", "{B724518C-02FE-454C-9339-DB193ACC93A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question4", "Question4\Question4.csproj", "{8B53D5FD-88B4-4DC0-99A5-DE04BB97E0C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{C0CDF4CC-2973-464B-ADBF-5028BE4E1D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CDF4CC-2973-464B-ADBF-5028BE4E1D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CDF4CC-2973-464B-ADBF-5028BE4E1D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B724518C-02FE-454C-9339-DB193ACC93A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B724518C-02FE-454C-9339-DB193ACC93A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B724518C-02FE-454C-9339-DB193ACC93A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B724518C-02FE-454C-9339-DB193ACC93A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B53D5FD-88B4-4DC0-99A5-DE04BB97E0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B53D5FD-88B4-4DC0-99A5-DE04BB97E0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B53D5FD-88B4-4DC0-99A5-DE04BB97E0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B53D5FD-88B4-4DC0-99A5-DE04BB97E0C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
