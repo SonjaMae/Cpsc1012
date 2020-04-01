@@ -123,7 +123,7 @@ namespace FileIOBrowseDialog
                     foundcount++;
                 }
 
-                //increment to look at t5he next element in the array
+                //increment to look at the next element in the array
                 searchindex++;
             }
 

@@ -57,7 +57,7 @@ namespace ParallelArrays
             //pass to your method the array referenced address
 
             //changes to the array within this method will alter the ORIGINAL array in the Main() method
-            //physicalsize is pass by Value (a copy of the original value)
+            //physicalsize is a pass-by value (a copy of the original value)
             //any change to the physicalsize REMAINS within this method and DOESN'T alter the original value in Main()
 
             int logicalsize = 0;
@@ -94,7 +94,7 @@ namespace ParallelArrays
                     //datatype can be a strongly declared datatype (example: int, double...)
                     //or you can use the declaratyion of var
                     //a var datatype is resolved at execution time
-                    //placeholdername is yopur variable name that you will use in your code to reference the current occurance of the data you're processing
+                    //placeholdername is your variable name that you will use in your code to reference the current occurance of the data you're processing
                     //in is a keyword
                     //the collection is your original data collection
 

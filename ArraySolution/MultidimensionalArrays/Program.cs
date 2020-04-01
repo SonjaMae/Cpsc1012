@@ -13,7 +13,7 @@ namespace MultidimensionalArrays
             //2 dimensional array (rows, columns):
             int[,] array2D = new int[5, 3];
 
-            //accessing a cell in your array reuires you to specify 2 indexes, a row index and a column index
+            //accessing a cell in your array requires you to specify 2 indexes, a row index and a column index
             //syntax:   arrayname[rowindex,columnindex]
             for(int r = 0; r < 5; r++)
             {
