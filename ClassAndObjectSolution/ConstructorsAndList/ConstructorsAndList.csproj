@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DED79CF-19C4-4628-BC83-67B51633F54F}</ProjectGuid>
+    <ProjectGuid>{20FD40E3-BDFE-4A83-BD8C-BCB554790FC1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ConstructorsAndList</RootNamespace>
     <AssemblyName>ConstructorsAndList</AssemblyName>
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassAndObject\ClassAndObject.csproj">
-      <Project>{ebc87946-cc2f-4d04-a765-e1614c446f80}</Project>
+      <Project>{e9d4f2ac-f931-4a92-ba65-a1aed7d594bf}</Project>
       <Name>ClassAndObject</Name>
     </ProjectReference>
   </ItemGroup>

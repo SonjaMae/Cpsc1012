@@ -15,75 +15,78 @@ namespace ConstructorsAndList
         static void Main(string[] args)
         {
             //List<T> is an instance class
-            //T stands for datatype
             //the class will hold different data from a second List<T>
             List<Assessment> StudentList = new List<Assessment>();
-
 
             //default Assessment constructor
             Assessment defaultItem = new Assessment();
             //fill it
-            defaultItem.FirstName = "sonja";
-            defaultItem.LastName = "holowaychuk";
-            defaultItem.Mark = 100;
+            defaultItem.FirstName = "don";
+            defaultItem.LastName = "welch";
+            defaultItem.Mark = 100.0;
             defaultItem.AssessmentName = "default";
 
             StudentList.Add(defaultItem);
 
-
             //greedie constructor
-            Assessment greedieItem = new Assessment("bob","harry","greedie", 35.6, "greed never pays");
+            Assessment greedieItem = new Assessment("bob", "harry", "greedie", 35.6, "greed never pays");
 
             StudentList.Add(greedieItem);
 
             //foreach(Assessment item in StudentList)
             //{
-            //    Console.WriteLine($"Name: {item.LastName}, { item.FirstName }, Assessment: {item.AssessmentName}, Mark: {item.Mark}, Comment: >{item.Comment}<");
+            //    Console.WriteLine($"Name: {item.LastName}, {item.FirstName} " +
+            //        $" Assessment {item.AssessmentName} Mark: {item.Mark} " +
+            //        $" Comment: >{item.Comment}< ");
             //}
 
             //for (int i = 0; i < StudentList.Count; i++)
             //{
-            //    Console.WriteLine($"Name: {StudentList[i].LastName}, { StudentList[i].FirstName }, Assessment: {StudentList[i].AssessmentName}, Mark: {StudentList[i].Mark}, Comment: >{StudentList[i].Comment}<");
+            //    Console.WriteLine($"Name: {StudentList[i].LastName}, {StudentList[i].FirstName} " +
+            //        $" Assessment {StudentList[i].AssessmentName} Mark: {StudentList[i].Mark} " +
+            //        $" Comment: >{StudentList[i].Comment}< ");
             //}
 
-            Console.WriteLine($"\n\n/File reading, list loading, using Assessment class\n");
+            Console.WriteLine($"\n\n File reading, List loading, using Assessment class\n");
 
-            ReadAndLoadList(StudentList);
+            ReadandLoadList(StudentList);
             foreach (Assessment item in StudentList)
             {
-                Console.WriteLine($"Name: {item.LastName}, { item.FirstName }, Assessment: {item.AssessmentName}, Mark: {item.Mark}, Comment: >{item.Comment}<");
+                Console.WriteLine($"Name: {item.LastName}, {item.FirstName} " +
+                    $" Assessment {item.AssessmentName} Mark: {item.Mark} " +
+                    $" Comment: >{item.Comment}< ");
             }
         }
 
-        static void ReadAndLoadList(List<Assessment> StudentList)
+        static void ReadandLoadList(List<Assessment> StudentList)
         {
             string Full_Path_File_Name = "";
             OpenFileDialog fd = new OpenFileDialog();
             fd.ShowDialog();
             Full_Path_File_Name = fd.FileName;
-            string readvalue = "";
+            string readValue = "";
             StreamReader reader = null;
-            //create a "parking space" for an instance of the class Assessment
+            //create a "paking space" for an instance of the class Assessment
             Assessment theInstance = null;
-            int column = 0; //this is used to indicate which column on the incoming record
+            int column = 0;  //this is used to indicate which column on the incoming record
             try
             {
                 reader = new StreamReader(Full_Path_File_Name);
-                readvalue = reader.ReadLine();
-                while (readvalue != null)
+                readValue = reader.ReadLine();
+                while (readValue != null)
                 {
-                    column = 0; //reset for the next record
-                    //create a new instance for the incoming record
-                    theInstance = new Assessment(); //using default constructor
-                    foreach (string item in readvalue.Split(','))
+                    column = 0;  //reset for next record
+                    //create a NEW instance for the incoming record
+                    theInstance = new Assessment();  //using default constructor
+                    foreach(string item in readValue.Split(','))
                     {
                         switch (column)
                         {
                             case 0:
                                 {
-                                    //this is the first column on the record
+                                    //first column on the record
                                     //get first and last name
-                                    //it's one column on the record
+                                    //it is one column on the record
                                     //we need to divide the data into 2
                                     //the first and last name are separated by a space
                                     int firstlastspace = item.IndexOf(' ');
@@ -93,19 +96,19 @@ namespace ConstructorsAndList
                                 }
                             case 1:
                                 {
-                                    //this is the second column on the record
+                                    //second column
                                     theInstance.AssessmentName = item;
                                     break;
                                 }
                             case 2:
                                 {
-                                    //this is the third column on the record
+                                    //third column
                                     theInstance.Mark = double.Parse(item);
                                     break;
                                 }
                             default:
                                 {
-                                    //this is the fourth column on the record
+                                    //fourth column
                                     theInstance.Comment = item;
                                     break;
                                 }
@@ -114,9 +117,9 @@ namespace ConstructorsAndList
                     }
                     StudentList.Add(theInstance);
                     //get the next line
-                    readvalue = reader.ReadLine();
+                    readValue = reader.ReadLine();
                 }
-            }
+            } //eof try
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");

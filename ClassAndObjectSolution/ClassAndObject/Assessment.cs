@@ -8,66 +8,81 @@ namespace ClassAndObject
 {
     public class Assessment
     {
-        //the access privilege to this class is public
+        //the access priviledge to this class is public
         //programs (outside user) can use this class
-        //it's NOT static, therefore the outside user will have to create (instantiate) an instance of this class if they wish to use it
+        //it is NOT static, therefore the outside user
+        //    will have to create an instance of this class
+        //    if they wish to use it
 
         //Private Data Member
-        //a private data member CAN be reached by the outside user
+        // a private data member CANNOT be touch by the outside user
         private string _Comment;
 
         //Properties
-        //properties are the interface to the outside world
-        //properties that are referenced by the outside world need to be exposed (made public)
-        //syntax:
-        //accesstype datatype propertyname {coding block}
-
-        //autoimplemented properties don't need a private data member
-        //data is stored internally by the system using the requested datatype
-        //access to data stored using this implementation MUST be via the property name
+        //Properties are the interface to the outside world
+        //Properties that are referenced by the outside world need
+        //    to be exposed, that is, made public
+        //Properties has the following syntax
+        //   accesstype datatype propertyname {coding block]
+        //Auto Implemented Properties do not need a private data member
+        //    data is stored internally by the system using the requested datatype
+        //    access to data  stored using this implementation MUST be via the Property name
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public string AssessmentName { get; set; }
         public double Mark { get; set; }
-
-        //fully implemented properties require a private data member of the same datatype as the property
-        //data is stored in the private data member
-        //any coding within the class itself can access the private data member
-        //best practices is to always use the property and NOT directly access the private data member
-        //reason for the above: the property likely has special coding to validate or manage the data which you do not want to bypass
-        //Comment is a nullable field. it's a string. we wish to avoid storing an empty string. we either have NO data (null) or we have a character string with at least one real character
+        //Fully Implemented Properties requires a private data member of
+        //     the same datatype as the property
+        //     data is stored in teh private data member
+        //     any coding within the class itself can access the private data member
+        //     best practices is to always use the property and NOT directly access
+        //         the private data member
+        //     reason: the property likely has special coding to validate or manage
+        //             the data which you do not want to by-pass
+        //Comment is a nullable field, it is a string, we wish to avoid storing an
+        //    empty string. We either have NO data (null) or we have a character string
+        //    with a least one real character.
         public string Comment
         {
-            //get is used when the use of the property is on the "right side" of an assignment statement
+            //get is used when the use of the property is on the "right side" of an
+            //  assignment statement
             get { return _Comment; }
-            //set is used when the data is trying to be placed within the instance ("left side" of an assignment statement)
-            //since properties DON'T have a parameter list AND are associated with a single piece of data, the data within the property is accessed using the keyword "value"
+            //set is used when the data is trying to be placed within the instance
+            // ("left side" of an assignment statement)
+            //since Properties do NOT have a  parameter list AND are associated with
+            //    a single piece of data, the data within the property is accessed
+            //    using the key word --> value
             set { _Comment = string.IsNullOrEmpty(value) ? null : value; }
         }
 
-        //if your class has no constructor, the system will create an instance AND initialize all your data storage areas (data members of auto properties) to their basic system defaults (int = 0, boolean = false, etc)
-       
-        //WARNING: if you code one constructor, then you are responsible for ANY and ALL constructors
-        //the system will not do anything on your behalf
+        //if your class has NO constructor the system will creat an instance 
+        //AND initial all your data storage areas (data member or auto  properties) to
+        //their basic system defaults
 
+        //WARNING!!!!!!!!!!!!!!!!!!!!!!!!!
+        //IF you code one constructor, then you are responsible for ANY and ALL constructors
+        //The system will not do anything on your behalf.
 
-        //      Constructors:
-        //Constructors are used to intialize the beginning state of an instance
+        //constructors
+        //constructors are used to initial the beginning state of an instance
 
-        //"Default" constructor
+        //"Default" Constructor
         //characteristic: no parameters
-        //coding block may or may not assign literal values to your data storage
+        //coding block may or may not assign literial values to your data storage
         public Assessment()
         {
-            //optionally assign a literal value to a data storage area
-            //notice below: good coding practice is to use properties and NOT directly the data member
+            //optionally assign a literial to a data storage area
+            //notice: good coding practice is to use Properties and NOT directly
+            //    the data member
             //Mark = 0.0;
             //Comment = "no comment";
         }
 
-        //"Greedie" constructor
+        //"Greedie" Constructor
         //characteristic: one parameter for each data storage item in the class
-        public Assessment(string firstname, string lastname, string assessmentname, double mark, string comment)
+        public Assessment(string firstname, string lastname, string assessmentname,
+                            double mark, string comment)
         {
             FirstName = firstname;
             LastName = lastname;
@@ -75,5 +90,6 @@ namespace ClassAndObject
             Mark = mark;
             Comment = comment;
         }
+
     }
 }
